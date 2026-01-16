@@ -41,8 +41,8 @@ enum {
 	fprintf(stderr, " [%s(), %s:%u] " format,		\
 			__func__, __FILE__, __LINE__,	\
 			##__VA_ARGS__)
-#else
-#define dprintf(format, ...)
+// #else
+// #define dprintf(format, ...)
 #endif
 
 #if defined DEBUG
@@ -51,8 +51,8 @@ enum {
 		if (level <= LOG_LEVEL)				\
 			dprintf(format, ##__VA_ARGS__);		\
 	} while (0)
-#else
-#define dlog(level, format, ...)
+// #else
+// #define dlog(level, format, ...)
 #endif
 
 #ifdef __cplusplus
